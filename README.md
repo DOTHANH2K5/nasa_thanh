@@ -1,47 +1,34 @@
-# NASA SPACE VIEWER
+# LPテンプレート（GitHub Pages用）
 
-NASA Astronomy Picture of the Day（APOD）を2つのテーマから探索するFlask Webアプリです。
+このフォルダの中身をGitHubリポジトリの一番上（root）にアップロードすると、GitHub Pagesで公開できます。
 
-- **7 DAYS**：最近7日間の画像と動画
-- **MOON COLLECTION**：NASA Image Libraryで検索した月画像
+## ファイル
 
-画面にはAPIの取得時刻、JSONサンプル、5分間隔の手動更新ボタンを表示します。通常の閲覧では1時間キャッシュを利用します。
+- `index.html`：ページの内容
+- `style.css`：見た目・レイアウト
+- `script.js`：メニューなどの動き
 
-各画像の♡ボタンを押すと、ブラウザの`localStorage`にお気に入りを保存します。ログインや個人情報の登録は不要で、`FAVORITES`画面から選んだ画像を確認・解除できます。
+## 画像を変更する
 
-`FAVORITES`画面のボタンから、選択した画像・タイトル・日付・出典をまとめた`MY NASA ALBUM` PDFを生成してダウンロードできます。PDFはサーバーへ保存せず、その場で生成します。
+画像URLはPicsum Photosのseed付きURLです。同じseedでは同じ画像が表示されます。別の画像にしたいときは、URLの `seed/lp-card-one` の部分のseed名を変更します。
 
-ナビゲーションは`01 7 DAYS`と`02 MOON COLLECTION`を主ボタンにし、その下に`♡ FAVORITES → PDF DOWNLOAD`をテキストリンクとして配置しています。お気に入り件数はリンク上に自動表示されます。
+例：`https://picsum.photos/seed/my-new-image/800/600`
 
-PDFボタン横のシェアアイコンから、対応するスマートフォンの共有メニューへPDFを渡せます。ファイル共有に対応していないブラウザではPDFダウンロードへ切り替わります。
+画像URLを使うため、ページ閲覧時にインターネット接続が必要です。自分で選んだ画像を使う場合は、画像ファイルをリポジトリに置き、`src` またはCSSのURLをそのファイルのパスに変更してください。
 
-## 学習内容
+## Googleフォームを埋め込む
 
-- `requests`によるNASA APIの利用
-- JSONデータの取得
-- URLパラメータと条件分岐
-- キーワードによるデータの絞り込み
-- FlaskとJinjaによるWeb表示
-- GitHubとRenderによるWeb公開
+1. 自分のGoogleフォームを開き、「送信」から埋め込み用のiframeコードをコピーします。
+2. `index.html` の `Googleフォーム埋め込み欄` を探します。
+3. サンプルの `<iframe>...</iframe>` を、コピーしたコードに置き換えます。
+4. `src` のURLに `REPLACE_WITH_YOUR_FORM_ID` が残っていないことを確認します。
+5. 公開前に、別アカウントまたはログアウト状態でフォームを開けるか確認します。
 
-## ローカルで実行
+## GitHub Pagesで公開する
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python app.py
-```
+1. GitHubで新しいリポジトリを作ります。
+2. このフォルダの中のファイルをリポジトリのrootにアップロードしてcommitします。
+3. リポジトリの **Settings → Pages** を開き、公開元としてブランチとrootフォルダを選択します。
+4. 表示された公開URLを開き、画像・リンク・フォームを確認します。
 
-ブラウザで `http://127.0.0.1:5000` を開きます。
-
-`NASA_API_KEY`が未設定の場合は、学習用の`DEMO_KEY`を使用します。
-
-## Renderで公開
-
-1. このリポジトリをGitHubへアップロードします。
-2. Renderで「New Web Service」を選び、リポジトリを接続します。
-3. Environment Variablesに `NASA_API_KEY` を登録します。
-4. デプロイ後、RenderのURLを開きます。
-
-NASA APIキーはGitHubへ書き込まず、Renderの環境変数へ設定してください。
+※このテンプレートの問い合わせフォームは、Googleフォームの埋め込みURLに差し替えてから利用してください。

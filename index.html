@@ -1,191 +1,290 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
+
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NASA SPACE VIEWER</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像の指定と表現｜学生用</title>
+    <link rel="stylesheet" href="./style.css">
+
   </head>
-  <body>
-    <header class="hero">
-      <p class="eyebrow">ASTRONOMY PICTURE OF THE DAY</p>
-      <h1>NASA SPACE<br>VIEWER</h1>
-      <p>選んだテーマで、NASAの宇宙画像を探索しよう。</p>
-
-      <nav class="mode-switch" aria-label="表示テーマ">
-        <a
-          href="{{ url_for('index', view='week') }}"
-          class="mode-button {% if view_mode == 'week' %}active{% endif %}"
-        >
-          <span>01</span>
-          7 DAYS
+    
+  <body id="top">
+  <!-- ヘッダーとナビゲーション / Header and navigation -->
+  <header class="main-header">
+    <div class="header-inner">
+        <a href="#top" class="header-logo" aria-label="ページ上部へ戻る">
+            <span>Brand</span>Logo
         </a>
-        <a
-          href="{{ url_for('index', view='moon') }}"
-          class="mode-button {% if view_mode == 'moon' %}active{% endif %}"
-        >
-          <span>02</span>
-          MOON COLLECTION
-        </a>
-      </nav>
 
-      <a
-        href="{{ url_for('index', view='favorites') }}"
-        class="favorites-link {% if view_mode == 'favorites' %}active{% endif %}"
-      >
-        <span id="favorites-nav-icon">♡</span>
-        FAVORITES
-        <b id="favorites-nav-count" hidden>0</b>
-        <span aria-hidden="true">→</span>
-        PDF DOWNLOAD
-      </a>
-    </header>
+        <!-- スマホのメニューボタン / Menu button for mobile -->
+        <button class="nav-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="header-nav" id="global-nav" aria-label="メインナビゲーション">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#specifications" class="nav-link">Specifications</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">Q&amp;A</a></li>
+                <li class="nav-item"><a href="#application" class="nav-link btn-nav">Apply Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main class="container">
-      {% if not view_mode %}
-        <section class="welcome">
-          <p>SELECT A VIEW</p>
-          <h2>見たい宇宙を選んでください。</h2>
-        </section>
-      {% elif error_message %}
-        <section class="message" role="alert">
-          <h2>データを表示できません</h2>
-          <p>{{ error_message }}</p>
-        </section>
-      {% endif %}
+<!--
+==========================================
+今日(きょう)の問(と)い / Today's Question
 
-      {% if view_mode == "favorites" %}
-        <div class="results-head">
-          <p>YOUR SELECTION</p>
-          <h2>お気に入りの宇宙</h2>
-          <span id="favorite-count">0 RESULTS</span>
+Q：CodePenにimagesフォルダがないのに、なぜ画像(がぞう)が見(み)えますか？
+   Why can we see the image without an images folder in CodePen?
+
+A：ここに答(こた)えを書(か)きます。
+   Write your answer here:
+
+
+==========================================
+-->
+
+<!-- 背景(はいけい)画像(がぞう)とパララックス / Background image and parallax -->
+<section class="section-common section1">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+        <h1>Title</h1>
+        <p>Text text text.Text text text.Text text text.Text text text.Text text text.Text text text.</p>
+        <a class="btn" href="xxxxx.html">Button</a>
+    </div>
+</section>
+
+<section class="section-common section2">
+    <h2>Sub title</h2>
+    <p>Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+</section>
+
+<section class="section-common section3">
+    <div class="head-line">
+        <h2>Sub title</h2>
+        <p>Text text text text.Text text text text.Text text text text.</p>
+    </div>
+
+    <!-- 画像(がぞう)にマウスをのせる、またはタップします / Hover or tap the images -->
+    <div class="card-container">
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-one/800/600" alt="カード1のイメージ画像" loading="lazy"></div>
+            <h2>Card Title 1</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-two/800/600" alt="カード2のイメージ画像" loading="lazy"></div>
+            <h2>Card Title 2</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-three/800/600" alt="カード3のイメージ画像" loading="lazy"></div>
+            <h2>Card Title 3</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-common section4" id="features">
+    <div class="head-line">
+        <h2>Features</h2>
+        <p>ここにリストセクションの概要テキストが入ります。</p>
+    </div>
+
+    <ul class="list-container">
+        <li class="list-item">
+            <span class="list-num">01</span>
+            <div class="list-content">
+                <h3>こだわりポイント 1</h3>
+                <p>テキストテキストテキスト。詳細な説明文がここに入ります。読みやすさを重視したレイアウトです。</p>
+            </div>
+        </li>
+        <li class="list-item">
+            <span class="list-num">02</span>
+            <div class="list-content">
+                <h3>こだわりポイント 2</h3>
+                <p>テキストテキストテキスト。詳細な説明文がここに入ります。読みやすさを重視したレイアウトです。</p>
+            </div>
+        </li>
+        <li class="list-item">
+            <span class="list-num">03</span>
+            <div class="list-content">
+                <h3>こだわりポイント 3</h3>
+                <p>テキストテキストテキスト。詳細な説明文がここに入ります。読みやすさを重視したレイアウトです。</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="section-common section5" id="specifications">
+    <div class="head-line">
+        <h2>Specifications</h2>
+        <p>ここにテーブルセクションの概要テキストが入ります。</p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>プラン</th>
+                    <th>初期費用</th>
+                    <th>月額料金</th>
+                    <th>対応サポート</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>ライトプラン</th>
+                    <td>¥0</td>
+                    <td>¥980</td>
+                    <td>メール対応のみ</td>
+                </tr>
+                <tr>
+                    <th>スタンダード</th>
+                    <td>¥10,000</td>
+                    <td><strong>¥2,980</strong></td>
+                    <td>メール・チャット</td>
+                </tr>
+                <tr>
+                    <th>プレミアム</th>
+                    <td>¥20,000</td>
+                    <td>¥5,980</td>
+                    <td>24時間電話対応</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- 画像(がぞう)と文字(もじ)の回(まわ)り込(こ)み / Image and text wrapping -->
+<section class="section-common archive-section">
+    <div class="archive-container">
+        
+        <div class="wrap-item">
+            <!-- 相対(そうたい)パス：同(おな)じサイトのimagesフォルダ / Relative path: images folder in this site -->
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-one/800/600" alt="記事1のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section1</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
         </div>
 
-        <section
-          class="gallery"
-          id="favorites-gallery"
-          aria-label="Favorite NASA images"
-        ></section>
-
-        <section class="album-actions" id="album-actions" hidden>
-          <p>YOUR PERSONAL COLLECTION</p>
-          <h2>選んだ宇宙を、ひとつのアルバムに。</h2>
-          <div class="album-action-buttons">
-            <button type="button" id="download-pdf">
-              PDFアルバムをダウンロード
-            </button>
-            <button
-              type="button"
-              id="share-pdf"
-              class="share-pdf"
-              aria-label="PDFアルバムをシェア"
-              title="PDFアルバムをシェア"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 16V3m0 0L7 8m5-5 5 5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>
-              </svg>
-            </button>
-          </div>
-          <small id="pdf-status" role="status"></small>
-        </section>
-
-        <section class="welcome" id="favorites-empty">
-          <p>NO FAVORITES YET</p>
-          <h2>♡を押して、好きな宇宙を集めよう。</h2>
-        </section>
-
-      {% elif entries %}
-        <section class="api-status">
-          <div>
-            <strong><i></i> LIVE FROM NASA</strong>
-            <p>
-              取得時刻：{{ fetched_at.strftime('%Y-%m-%d %H:%M:%S') }} JST
-              {% if from_cache %}／キャッシュ表示{% else %}／最新取得{% endif %}
-            </p>
-          </div>
-
-          <form method="get" action="{{ url_for('index') }}">
-            <input type="hidden" name="view" value="{{ view_mode }}">
-            <input type="hidden" name="refresh" value="1">
-            <button type="submit">↻ NASAから最新データを取得</button>
-          </form>
-        </section>
-
-        {% if refresh_message %}
-          <p class="refresh-message">{{ refresh_message }}</p>
-        {% endif %}
-
-        <div class="results-head">
-          {% if view_mode == "moon" %}
-            <p>NASA IMAGE LIBRARY</p>
-            <h2>月のコレクション</h2>
-          {% else %}
-            <p>LATEST APOD</p>
-            <h2>最近7日間の宇宙</h2>
-          {% endif %}
-          <span>{{ entries|length }} RESULTS</span>
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-two/800/600" alt="記事2のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section2</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
         </div>
 
-        <section class="gallery" aria-label="NASA APOD gallery">
-          {% for entry in entries %}
-            <article class="card">
-              <button
-                type="button"
-                class="favorite-button"
-                data-entry="{{ entry | tojson | forceescape }}"
-                aria-label="お気に入りに追加"
-              >
-                <span aria-hidden="true">♡</span>
-              </button>
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-three/800/600" alt="記事3のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section3</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+        </div>
 
-              {% if entry.media_type == "image" %}
-                <img
-                  src="{{ entry.url }}"
-                  alt="{{ entry.title }}"
-                  loading="lazy"
-                >
-              {% elif entry.thumbnail_url %}
-                <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">
-                  <img
-                    src="{{ entry.thumbnail_url }}"
-                    alt="{{ entry.title }}の動画サムネイル"
-                    loading="lazy"
-                  >
-                </a>
-              {% endif %}
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-four/800/600" alt="記事4のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section4</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+        </div>
 
-              <div class="card-body">
-                <time datetime="{{ entry.date }}">{{ entry.date }}</time>
-                <h2>{{ entry.title }}</h2>
-                <p>{{ entry.explanation }}</p>
-                <a
-                  class="source-link"
-                  href="{{ entry.hdurl or entry.url }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  NASAで見る <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </article>
-          {% endfor %}
-        </section>
+    </div>
+</section>
 
-        <details class="json-panel">
-          <summary><span>{ }</span> APIの仕組みを見る</summary>
-          <p>表示データの先頭3件をJSON形式で確認できます。</p>
-          <pre><code>{{ json_preview }}</code></pre>
+<section class="section-common section6" id="faq">
+    <div class="head-line">
+        <h2>Frequently Asked Questions</h2>
+        <p>よくあるご質問をまとめました。クリックすると回答が開きます。</p>
+    </div>
+
+    <div class="qa-container">
+        <!-- 質問(しつもん)1 -->
+        <details class="qa-item" > <!-- 最初(さいしょ)から開(ひら)く場合(ばあい)は「open」をつけます -->
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">未経験からでも受講することは可能ですか？</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">はい、完全に未経験からでも問題なくスタートしていただけます。カリキュラムは基礎から丁寧に解説しており、ステップバイステップで学べる環境を整えています。</p>
+            </div>
         </details>
 
-      {% elif view_mode and not error_message %}
-        <p class="message">条件に合う画像が見つかりませんでした。</p>
-      {% endif %}
-    </main>
+        <!-- 質問(しつもん)2 -->
+        <details class="qa-item">
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">途中で質問ができるサポートはありますか？</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">オンラインチャットツールを使用して、いつでも講師に質問をすることが可能です。原則24時間以内に回答いたしますので、学習の手を止めることなく進められます。</p>
+            </div>
+        </details>
 
-    <footer>
-      Data provided by NASA Astronomy Picture of the Day
-    </footer>
+        <!-- 質問(しつもん)3 -->
+        <details class="qa-item">
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">受講に必要なパソコンのスペックを教えてください。</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">ブラウザ（Google Chromeなど）がスムーズに動くパソコンであれば、Windows・Macどちらでも問題ありません。教材のCodePenもブラウザ上で完結するため、高いスペックは不要です。</p>
+            </div>
+        </details>
+    </div>
+</section>
 
-    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+<section class="section-common section7" id="application">
+    <div class="head-line">
+        <h2>Application Form</h2>
+        <p>必要事項をご記入の上、送信ボタンをクリックしてください。</p>
+    </div>
+
+    <!--
+      Googleフォーム埋(う)め込(こ)み欄(らん) / Google Forms embed area
+      Googleフォームの「送信」→「<> 埋(う)め込(こ)み」からiframeコードをコピーし、下(した)のiframeと入(い)れ替(か)えます。
+      Copy the iframe code from Google Forms and replace the sample iframe below.
+      公開前(こうかいまえ)に、回答(かいとう)できる設定(せってい)になっているか確認(かくにん)します。
+      Before publishing, check that respondents can access the form.
+    -->
+    <div class="form-container google-form-container">
+        <iframe
+            src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true"
+            title="Googleフォーム：お問い合わせ"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            フォームを表示できない場合は、<a href="https://docs.google.com/forms/">Googleフォーム</a>を開いてください。
+        </iframe>
+    </div>
+</section>
+
+<!-- フッター / Footer -->
+<footer class="main-footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <a href="#" class="footer-logo"><span>Brand</span>Logo</a>
+            <ul class="footer-links">
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="#">特定商取引法に基づく表記</a></li>
+                <li><a href="#">運営会社</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 BrandLogo. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="./script.js"></script>
+    
   </body>
+  
 </html>

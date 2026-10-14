@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像の指定と表現｜学生用</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body id="top">
+  <!-- ヘッダーとナビゲーション / Header and navigation -->
+  <header class="main-header">
+    <div class="header-inner">
+        <a href="#top" class="header-logo" aria-label="ページ上部へ戻る">
+            <span>Brand</span>Logo
+        </a>
+
+        <!-- スマホのメニューボタン / Menu button for mobile -->
+        <button class="nav-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="header-nav" id="global-nav" aria-label="メインナビゲーション">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#specifications" class="nav-link">Specifications</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">Q&amp;A</a></li>
+                <li class="nav-item"><a href="#application" class="nav-link btn-nav">Apply Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--
+==========================================
+今日(きょう)の問(と)い / Today's Question
+
+Q：CodePenにimagesフォルダがないのに、なぜ画像(がぞう)が見(み)えますか？
+   Why can we see the image without an images folder in CodePen?
+
+A：ここに答(こた)えを書(か)きます。
+   Write your answer here:
+
+
+==========================================
+-->
+
+<!-- 背景(はいけい)画像(がぞう)とパララックス / Background image and parallax -->
+<section class="section-common section1">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+        <h1>Title</h1>
+        <p>Text text text.Text text text.Text text text.Text text text.Text text text.Text text text.</p>
+        <a class="btn" href="xxxxx.html">Button</a>
+    </div>
+</section>
+
+<section class="section-common section2">
+    <h2>Sub title</h2>
+    <p>Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+</section>
+
+<section class="section-common section3">
+    <div class="head-line">
+        <h2>Sub title</h2>
+        <p>Text text text text.Text text text text.Text text text text.</p>
+    </div>
+
+    <!-- 画像(がぞう)にマウスをのせる、またはタップします / Hover or tap the images -->
+    <div class="card-container">
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-one/800/600" alt="カード1のイメージ画像" loading="lazy"></div>
+            <h2>Card Title 1</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-two/800/600" alt="カード2のイメージ画像" loading="lazy"></div>
+            <h2>Card Title 2</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-three/800/600" alt="カード3のイメージ画像" loading="lazy"></div>
+            <h2>Card Title 3</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-common section4" id="features">
+    <div class="head-line">
+        <h2>Features</h2>
+        <p>ここにリストセクションの概要テキストが入ります。</p>
+    </div>
+
+    <ul class="list-container">
+        <li class="list-item">
+            <span class="list-num">01</span>
+            <div class="list-content">
+                <h3>こだわりポイント 1</h3>
+                <p>テキストテキストテキスト。詳細な説明文がここに入ります。読みやすさを重視したレイアウトです。</p>
+            </div>
+        </li>
+        <li class="list-item">
+            <span class="list-num">02</span>
+            <div class="list-content">
+                <h3>こだわりポイント 2</h3>
+                <p>テキストテキストテキスト。詳細な説明文がここに入ります。読みやすさを重視したレイアウトです。</p>
+            </div>
+        </li>
+        <li class="list-item">
+            <span class="list-num">03</span>
+            <div class="list-content">
+                <h3>こだわりポイント 3</h3>
+                <p>テキストテキストテキスト。詳細な説明文がここに入ります。読みやすさを重視したレイアウトです。</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="section-common section5" id="specifications">
+    <div class="head-line">
+        <h2>Specifications</h2>
+        <p>ここにテーブルセクションの概要テキストが入ります。</p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>プラン</th>
+                    <th>初期費用</th>
+                    <th>月額料金</th>
+                    <th>対応サポート</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>ライトプラン</th>
+                    <td>¥0</td>
+                    <td>¥980</td>
+                    <td>メール対応のみ</td>
+                </tr>
+                <tr>
+                    <th>スタンダード</th>
+                    <td>¥10,000</td>
+                    <td><strong>¥2,980</strong></td>
+                    <td>メール・チャット</td>
+                </tr>
+                <tr>
+                    <th>プレミアム</th>
+                    <td>¥20,000</td>
+                    <td>¥5,980</td>
+                    <td>24時間電話対応</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- 画像(がぞう)と文字(もじ)の回(まわ)り込(こ)み / Image and text wrapping -->
+<section class="section-common archive-section">
+    <div class="archive-container">
+        
+        <div class="wrap-item">
+            <!-- 相対(そうたい)パス：同(おな)じサイトのimagesフォルダ / Relative path: images folder in this site -->
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-one/800/600" alt="記事1のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section1</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+        </div>
+
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-two/800/600" alt="記事2のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section2</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+        </div>
+
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-three/800/600" alt="記事3のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section3</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+        </div>
+
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-four/800/600" alt="記事4のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">Archive-Section4</h2>
+            <p class="wrap-text">Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.Text text text text.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section-common section6" id="faq">
+    <div class="head-line">
+        <h2>Frequently Asked Questions</h2>
+        <p>よくあるご質問をまとめました。クリックすると回答が開きます。</p>
+    </div>
+
+    <div class="qa-container">
+        <!-- 質問(しつもん)1 -->
+        <details class="qa-item" > <!-- 最初(さいしょ)から開(ひら)く場合(ばあい)は「open」をつけます -->
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">未経験からでも受講することは可能ですか？</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">はい、完全に未経験からでも問題なくスタートしていただけます。カリキュラムは基礎から丁寧に解説しており、ステップバイステップで学べる環境を整えています。</p>
+            </div>
+        </details>
+
+        <!-- 質問(しつもん)2 -->
+        <details class="qa-item">
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">途中で質問ができるサポートはありますか？</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">オンラインチャットツールを使用して、いつでも講師に質問をすることが可能です。原則24時間以内に回答いたしますので、学習の手を止めることなく進められます。</p>
+            </div>
+        </details>
+
+        <!-- 質問(しつもん)3 -->
+        <details class="qa-item">
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">受講に必要なパソコンのスペックを教えてください。</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">ブラウザ（Google Chromeなど）がスムーズに動くパソコンであれば、Windows・Macどちらでも問題ありません。教材のCodePenもブラウザ上で完結するため、高いスペックは不要です。</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="section-common section7" id="application">
+    <div class="head-line">
+        <h2>Application Form</h2>
+        <p>下のボタンからお問い合わせフォームを開き、必要事項を入力してください。</p>
+    </div>
+
+    <!--
+      Googleフォーム埋(う)め込(こ)み欄(らん) / Google Forms embed area
+      Googleフォームの「送信」→「<> 埋(う)め込(こ)み」からiframeコードをコピーし、下(した)のiframeと入(い)れ替(か)えます。
+      Copy the iframe code from Google Forms and replace the sample iframe below.
+      公開前(こうかいまえ)に、回答(かいとう)できる設定(せってい)になっているか確認(かくにん)します。
+      Before publishing, check that respondents can access the form.
+    -->
+    <div class="form-submit">
+        <p>ボタンを押すと、Googleフォームが新しいタブで開きます。</p>
+        <a class="form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSetxbcU52UQk4c1vbim-4TkMBeZt3OPUWkHQJLCZ1eQL2yjSw/viewform" target="_blank" rel="noopener noreferrer">
+            お問い合わせフォームを開く
+        </a>
+    </div>
+</section>
+
+<!-- フッター / Footer -->
+<footer class="main-footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <a href="#" class="footer-logo"><span>Brand</span>Logo</a>
+            <ul class="footer-links">
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="#">特定商取引法に基づく表記</a></li>
+                <li><a href="#">運営会社</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 BrandLogo. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="./script.js"></script>
+    
+  </body>
+  
+</html>
