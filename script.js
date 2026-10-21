@@ -1,14 +1,4 @@
-/* TODO 02：授業(じゅぎょう)でパララックスのJavaScriptを追加(ついか)します。
-   Add the parallax JavaScript in class.
-
-確認(かくにん)する要素(ようそ) / Check these elements
-- .section1：ヒーローエリア
-- .hero-bg：動(うご)かす背景(はいけい)画像(がぞう)
-
-完成(かんせい)後(ご)は、スクロール量(りょう)の一部(いちぶ)を translateY() に渡(わた)します。
-Use part of the scroll value in translateY().
-*/
-
+/* ポートフォリオの動き：モバイルナビ、スクロール表示、控えめな背景パララックス */
 /* スマホのナビを開(ひら)く・閉(と)じる / Open and close the mobile menu */
 const navToggle = document.querySelector(".nav-toggle");
 const headerNav = document.querySelector(".header-nav");
@@ -41,4 +31,51 @@ if (navToggle && headerNav) {
     });
 
     window.matchMedia("(min-width: 769px)").addEventListener("change", closeNavigation);
+}
+
+/* スクロールに合わせて要素をふんわり表示 / Reveal content on scroll */
+document.documentElement.classList.add("has-js");
+
+const revealTargets = document.querySelectorAll(
+    ".section-common:not(.section1) .head-line, .card, .list-item, .wrap-item, .custom-table, .faq-item, .google-form-container, .form-submit"
+);
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -36px 0px"
+    });
+
+    revealTargets.forEach((element, index) => {
+        element.classList.add("reveal-on-scroll");
+        element.style.setProperty("--reveal-delay", `${(index % 3) * 70}ms`);
+        revealObserver.observe(element);
+    });
+} else {
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
+}
+
+/* ヒーロー背景を少しだけ動かす / Gentle hero parallax */
+const heroBackground = document.querySelector(".hero-bg");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (heroBackground && !reduceMotion.matches) {
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+
+        window.requestAnimationFrame(() => {
+            const offset = Math.min(window.scrollY * 0.12, 34);
+            heroBackground.style.transform = `translate3d(0, ${offset}px, 0)`;
+            ticking = false;
+        });
+    }, { passive: true });
 }
