@@ -1,34 +1,41 @@
-# LPテンプレート（GitHub Pages用）
+# Web制作ポートフォリオ
 
-このフォルダの中身をGitHubリポジトリの一番上（root）にアップロードすると、GitHub Pagesで公開できます。
+UXの課題整理、情報設計、文章改善をテーマにしたポートフォリオ用Webページです。GitHub Pagesで公開できるよう、HTML・CSS・JavaScriptをリポジトリのルートに配置しています。
 
-## ファイル
+## ポートフォリオページ
 
-- `index.html`：ページの内容
-- `style.css`：見た目・レイアウト
-- `script.js`：メニューなどの動き
+- `index.html`：ポートフォリオの公開用トップページ（GitHub Pagesの標準ページ）
+- `index_portfolio.html`：ポートフォリオ版のHTML
+- `index_google_form_button_portfolio.html`：お問い合わせフォームをボタンから開くポートフォリオ版
+- `index_google_form_button.html`：元のGoogleフォームボタン版
+- `style.css`：ページの見た目・レイアウト
+- `script.js`：ページの動き
+- `README.md`：このプロジェクトの説明
+- `LICENSE.txt`：ライセンス
+- `requirements.txt`：Python関連の依存関係（リポジトリ内の他のアプリ用）
+- `app.js`、`app.py`、`render.yaml`：リポジトリ内の既存アプリ用ファイル
 
-## 画像を変更する
+## 公開方法（GitHub Pages）
 
-画像URLはPicsum Photosのseed付きURLです。同じseedでは同じ画像が表示されます。別の画像にしたいときは、URLの `seed/lp-card-one` の部分のseed名を変更します。
+1. GitHubリポジトリの **Settings → Pages** を開きます。
+2. 公開元として `main` ブランチと `/(root)` を選択します。
+3. 保存後、表示された公開URLを開いてページを確認します。
 
-例：`https://picsum.photos/seed/my-new-image/800/600`
+ルートの `index.html` が公開トップページとして使われます。フォームや外部リンクは、公開前に実際に動作するか確認してください。
 
-画像URLを使うため、ページ閲覧時にインターネット接続が必要です。自分で選んだ画像を使う場合は、画像ファイルをリポジトリに置き、`src` またはCSSのURLをそのファイルのパスに変更してください。
+## Googleフォームについて
 
-## Googleフォームを埋め込む
+- `index.html` はページ内埋め込みフォーム版です。
+- `index_google_form_button_portfolio.html` はフォームを別タブで開くボタン版です。
+- 使用する場合は、自分のフォームURL・埋め込みコードに差し替え、別アカウントまたはログアウト状態でもアクセスできることを確認してください。
 
-1. 自分のGoogleフォームを開き、「送信」から埋め込み用のiframeコードをコピーします。
-2. `index.html` の `Googleフォーム埋め込み欄` を探します。
-3. サンプルの `<iframe>...</iframe>` を、コピーしたコードに置き換えます。
-4. `src` のURLに `REPLACE_WITH_YOUR_FORM_ID` が残っていないことを確認します。
-5. 公開前に、別アカウントまたはログアウト状態でフォームを開けるか確認します。
+## 画像について
 
-## GitHub Pagesで公開する
+テンプレート内の画像URLは外部サービスを参照しています。画像を差し替える場合は、HTMLの `src` またはCSSのURLを更新してください。外部画像を利用するページは閲覧時にインターネット接続が必要です。
 
-1. GitHubで新しいリポジトリを作ります。
-2. このフォルダの中のファイルをリポジトリのrootにアップロードしてcommitします。
-3. リポジトリの **Settings → Pages** を開き、公開元としてブランチとrootフォルダを選択します。
-4. 表示された公開URLを開き、画像・リンク・フォームを確認します。
+## 公開前のチェックリスト
 
-※このテンプレートの問い合わせフォームは、Googleフォームの埋め込みURLに差し替えてから利用してください。
+- 制作事例へのリンクが実際のページを指している
+- GoogleフォームのURL・公開権限が正しい
+- スマートフォンとPCの両方で表示を確認した
+- 成果や数値は、実際に確認できる情報だけを記載した
