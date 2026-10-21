@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web制作ポートフォリオ｜UX課題を伝わる体験へ</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body id="top">
+  <!-- ヘッダーとナビゲーション / Header and navigation -->
+  <header class="main-header">
+    <div class="header-inner">
+        <a href="#top" class="header-logo" aria-label="ページ上部へ戻る">
+            <span>Web</span>Portfolio
+        </a>
+
+        <!-- スマホのメニューボタン / Menu button for mobile -->
+        <button class="nav-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="header-nav" id="global-nav" aria-label="メインナビゲーション">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#features" class="nav-link">制作のポイント</a></li>
+                <li class="nav-item"><a href="#specifications" class="nav-link">制作プロセス</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">よくある質問</a></li>
+                <li class="nav-item"><a href="#application" class="nav-link btn-nav">制作事例を見る</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--
+==========================================
+今日(きょう)の問(と)い / Today's Question
+
+Q：CodePenにimagesフォルダがないのに、なぜ画像(がぞう)が見(み)えますか？
+   Why can we see the image without an images folder in CodePen?
+
+A：ここに答(こた)えを書(か)きます。
+   Write your answer here:
+
+
+==========================================
+-->
+
+<!-- 背景(はいけい)画像(がぞう)とパララックス / Background image and parallax -->
+<section class="section-common section1">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+        <h1>UXの課題を、伝わるWeb体験へ。</h1>
+        <p>ユーザーの悩みや目的を整理し、情報設計と言葉の工夫で伝わりやすいWebページを目指す制作ポートフォリオです。課題の発見から文章改善、ページ構成までの考え方をご紹介します。</p>
+        <a class="btn" href="xxxxx.html">制作事例を見る</a>
+    </div>
+</section>
+
+<section class="section-common section2">
+    <h2>制作で大切にしていること</h2>
+    <p>見た目を整えるだけでなく、「誰に、何を、どう伝えるか」を考えることを大切にしています。ユーザーの視点に立ち、情報を整理して、次の行動につながるページづくりを目指します。</p>
+</section>
+
+<section class="section-common section3">
+    <div class="head-line">
+        <h2>Sub title</h2>
+        <p>Text text text text.Text text text text.Text text text text.</p>
+    </div>
+
+    <!-- 画像(がぞう)にマウスをのせる、またはタップします / Hover or tap the images -->
+    <div class="card-container">
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-one/800/600" alt="カード1のイメージ画像" loading="lazy"></div>
+            <h2>ユーザー視点で課題を整理</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-two/800/600" alt="カード2のイメージ画像" loading="lazy"></div>
+            <h2>伝わる文章へ改善</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+        <div class="card" tabindex="0">
+            <div class="card-image-frame"><img class="card-image" src="https://picsum.photos/seed/lp-card-three/800/600" alt="カード3のイメージ画像" loading="lazy"></div>
+            <h2>情報を整理して構成</h2>
+            <p>Text text text text.Text text text text.Text text text text.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-common section4" id="features">
+    <div class="head-line">
+        <h2>制作のポイント</h2>
+        <p>制作物で意識している3つのポイントを紹介します。</p>
+    </div>
+
+    <ul class="list-container">
+        <li class="list-item">
+            <span class="list-num">01</span>
+            <div class="list-content">
+                <h3>課題と目的を明確に</h3>
+                <p>制作の最初に、ページの目的と想定するユーザーを整理します。誰に何を伝えるべきかを明確にし、改善の方向性を定めます。</p>
+            </div>
+        </li>
+        <li class="list-item">
+            <span class="list-num">02</span>
+            <div class="list-content">
+                <h3>読みやすい情報設計</h3>
+                <p>情報の優先順位を見直し、見出し・本文・ボタンの役割を整理します。必要な情報にたどり着きやすい構成を目指します。</p>
+            </div>
+        </li>
+        <li class="list-item">
+            <span class="list-num">03</span>
+            <div class="list-content">
+                <h3>伝わるコピーと導線</h3>
+                <p>ユーザーの疑問や不安を想定して文章を整え、次に取ってほしい行動が分かる導線を考えます。</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="section-common section5" id="specifications">
+    <div class="head-line">
+        <h2>制作プロセス</h2>
+        <p>課題整理から文章改善まで、ページ制作を進める際の基本的な流れです。実績や数値は、確認できる情報のみを掲載します。</p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>工程</th>
+                    <th>取り組むこと</th>
+                    <th>確認するポイント</th>
+                    <th>アウトプット</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><th>01 課題整理</th><td>目的・対象者</td><td>解決したい課題</td><td>課題メモ</td></tr>
+                <tr><th>02 情報設計</th><td>情報の優先順位</td><td><strong>見出し・導線</strong></td><td>ページ構成案</td></tr>
+                <tr><th>03 文章改善</th><td>伝え方の見直し</td><td>読みやすさ</td><td>改善後のコピー</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- 画像(がぞう)と文字(もじ)の回(まわ)り込(こ)み / Image and text wrapping -->
+<section class="section-common archive-section">
+    <div class="archive-container">
+        
+        <div class="wrap-item">
+            <!-- 相対(そうたい)パス：同(おな)じサイトのimagesフォルダ / Relative path: images folder in this site -->
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-one/800/600" alt="記事1のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">01｜課題と目的を整理</h2>
+            <p class="wrap-text">ページを作る前に、誰がどんな状況で訪問するのかを考えます。目的を定めることで、掲載する情報や伝える順番を判断しやすくします。</p>
+        </div>
+
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-two/800/600" alt="記事2のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">02｜キーワードと伝え方</h2>
+            <p class="wrap-text">検索キーワードをただ並べるのではなく、ユーザーの検索意図に合う自然な言葉として文章へ取り入れます。</p>
+        </div>
+
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-three/800/600" alt="記事3のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">03｜ページ構成を見直す</h2>
+            <p class="wrap-text">見出し、本文、ボタンの文言を見直し、情報が伝わる順番と行動の分かりやすさを意識します。</p>
+        </div>
+
+        <div class="wrap-item">
+            <img class="wrap-image" src="https://picsum.photos/seed/lp-article-four/800/600" alt="記事4のイメージ画像" loading="lazy">
+            <h2 class="wrap-title">04｜改善内容を検証する</h2>
+            <p class="wrap-text">公開前にリンクや表示内容を確認し、目的に合ったページになっているかを振り返ります。改善効果を示す場合は、計測できた数値を用います。</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section-common section6" id="faq">
+    <div class="head-line">
+        <h2>よくある質問</h2>
+        <p>このポートフォリオや制作の進め方について、よくある質問をまとめました。</p>
+    </div>
+
+    <div class="qa-container">
+        <!-- 質問(しつもん)1 -->
+        <details class="qa-item" > <!-- 最初(さいしょ)から開(ひら)く場合(ばあい)は「open」をつけます -->
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">このポートフォリオでは何を紹介していますか？</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">Webページの課題整理、情報設計、文章改善など、ユーザーに伝わるページづくりで意識していることを紹介しています。</p>
+            </div>
+        </details>
+
+        <!-- 質問(しつもん)2 -->
+        <details class="qa-item">
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">制作で特に大切にしていることは何ですか？</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">見た目だけでなく、対象ユーザーと目的を明確にし、情報の順番や文章、行動導線を整えることを大切にしています。</p>
+            </div>
+        </details>
+
+        <!-- 質問(しつもん)3 -->
+        <details class="qa-item">
+            <summary class="qa-question">
+                <span class="qa-icon-q">Q</span>
+                <span class="qa-text">実際の成果や実績は掲載されていますか？</span>
+                <span class="qa-arrow"></span>
+            </summary>
+            <div class="qa-answer">
+                <span class="qa-icon-a">A</span>
+                <p class="qa-answer-text">実績や数値は、確認できる情報をもとに掲載する方針です。現時点で確認できない成果数値は記載せず、制作の考え方や改善内容を中心に紹介しています。</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="section-common section7" id="application">
+    <div class="head-line">
+        <h2>お問い合わせ・ご相談</h2>
+        <p>ポートフォリオや制作内容についてご質問・ご相談がありましたら、フォームからお問い合わせください。</p>
+    </div>
+
+    <!--
+      Googleフォーム埋(う)め込(こ)み欄(らん) / Google Forms embed area
+      Googleフォームの「送信」→「<> 埋(う)め込(こ)み」からiframeコードをコピーし、下(した)のiframeと入(い)れ替(か)えます。
+      Copy the iframe code from Google Forms and replace the sample iframe below.
+      公開前(こうかいまえ)に、回答(かいとう)できる設定(せってい)になっているか確認(かくにん)します。
+      Before publishing, check that respondents can access the form.
+    -->
+    <div class="form-container google-form-container">
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdDSLPDtgxVW2UBKXfqmtkMeAYnOBM8jq1cd3GmVxvj5JF5xg/viewform?embedded=true"
+            title="Googleフォーム：お問い合わせ"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            フォームを表示できない場合は、<a href="https://docs.google.com/forms/">Googleフォーム</a>を開いてください。
+        </iframe>
+    </div>
+</section>
+
+<!-- フッター / Footer -->
+<footer class="main-footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <a href="#" class="footer-logo"><span>Web</span>Portfolio</a>
+            <ul class="footer-links">
+                <li><a href="#">制作方針</a></li>
+                <li><a href="#">制作プロセス</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Web Portfolio. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="./script.js"></script>
+    
+  </body>
+  
+</html>
